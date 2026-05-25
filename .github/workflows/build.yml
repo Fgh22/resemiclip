@@ -26,6 +26,7 @@ jobs:
 
       - name: Build
         run: |
+          chmod +x version/appversion.sh
           rm -rf build && CC=gcc CXX=g++ cmake -B build && cmake --build build -j8
 
       - name: Prepare files
